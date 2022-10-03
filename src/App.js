@@ -4,12 +4,20 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Product from './components/Product/Product';
 import About from './components/About/About';
+import Main from './layout/Main';
 
 function App() {
   const router = createBrowserRouter([
-    { path: '/', element: <div>This is Default Page</div> },
-    { path: '/home', element: <Home></Home> },
-    { path: '/product', element: <Product></Product> },
+    {
+      path: '/',
+      element: <Main></Main>,
+      children: [
+        { path: '/', element: <Home></Home> },
+        { path: '/home', element: <Home></Home> },
+        { path: '/product', element: <Product></Product> },
+      ]
+    },
+
     { path: '/about', element: <About></About> }
   ])
   return (

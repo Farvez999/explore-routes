@@ -1,0 +1,11 @@
+.header a {
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 5px 10px;
+}
+
+.header a:hover {
+    background-color: aquamarine;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
